@@ -24,6 +24,6 @@
     let str = 'abc', result = [], allResult = [], level = 0;
     // array containing 1s with same length as str
     let countArr = Array.from({length : str.length}, () => 1 );
-    permutations(str, [1,1,1], result, level, allResult);
+    permutations(str, countArr, result, level, allResult);
     console.log(allResult);
 }
