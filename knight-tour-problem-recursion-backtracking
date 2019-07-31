@@ -7,7 +7,7 @@
         // start row, col & move
           let startRow = 0, startCol = 0, startMove = 1;
           
-        // knight moves
+        // knight moves (only this sequence of moves gives the fastest result, rest will take endless time)
         let pathRow = [ 2, 1, -1, -2, -2, -1, 1, 2];
         let pathCol = [1, 2, 2, 1, -1, -2, -2, -1];
 
