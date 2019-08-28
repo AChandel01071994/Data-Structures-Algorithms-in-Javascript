@@ -1,12 +1,12 @@
 // Longest Common Subsequence (LCS) - Recursion and Dynamic Programming
 
 {
-    // brute force approach - O (n ^ 2 * m)
+    // brute force approach - O (n * m)
     function longestCommonSubsequenceBruteForce(str1, str2){
         let result = '';
-        for(let i = 0; i < str2.length; i++){
+//         for(let i = 0; i < str2.length; i++){
             let lastIndex = -1, str = '';
-            for(let j = i; j < str2.length; j++){
+            for(let j = 0; j < str2.length; j++){
                 for(let k = 0; k < str1.length; k++){
                     if(str1[k] === str2[j]) {
                         if(k > lastIndex){
@@ -18,8 +18,7 @@
                 }
             }
             if(str.length >= result.length) result = str;
-        }
-
+//         }
         return result;
     }
     // recursion
@@ -76,7 +75,6 @@
                     }
                     else {
                         // mismatch
-                        // select max value
                         if(arr[i - 1] [j].val >= arr[i][j - 1].val){
                             arr[i][j] = {
                             val : arr[i - 1] [j].val,
@@ -105,9 +103,9 @@
         return str;
     }
 
-//     let str1 = 'AGGTAB';
-//     let str2 = 'GXTXAYB';
+    let str1 = 'AGGTAB';
+    let str2 = 'GXTXAYB';
 // 4
 
-    longestCommonSubsequenceDP(str1, str2)
+    longestCommonSubsequenceBruteForce(str1, str2)
 }
